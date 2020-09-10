@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
     <h1 class="text-center">Sign Up</h1>
 
     <form #f="ngForm" (ngSubmit)="signup(f)">
@@ -9,7 +9,7 @@
             <img src="../../assets/user.png" alt="user">
             <input placeholder="Your name" class="name form-control" ngModel name="name" #name="ngModel" required>
         </div>
-        
+
         <div class="alert-icon alert-icon-two">
             <img src="../../assets/mail.png" alt="">
             <input type="email" class="email form-control" placeholder="Email" ngModel name="email" #email="ngModel" required email>
@@ -39,6 +39,6 @@
         <button class="btn btn-primary" [disabled]="f.invalid || confirmPassword.value !== password.value">Sign Up</button><br>
         <div class="alert alert-danger invalid-alert" *ngIf="errorMessage">{{ errorMessage }}</div>
 
-    </form> 
+    </form>
 
 </div>
